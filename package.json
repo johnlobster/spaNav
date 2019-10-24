@@ -4,7 +4,9 @@
   "description": "example of link based navigation in single page app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:example2",
+    "build:example2": "cp example2/index.html dist && cp example2/index.js dist"
   },
   "repository": {
     "type": "git",
