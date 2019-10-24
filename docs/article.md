@@ -16,3 +16,12 @@ Test that page movement leads to 404
 
 https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-configure-redirects-for-your-static-site/
 
+https://docs.netlify.com/routing/redirects/redirect-options/
+
+copy _redirects file over
+
+https://spanav.netlify.com/page1
+
+had to explicitly copy the _redirects over during build
+Can probably do cp *
+favicon git checked in by mistake, could remove it

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:example2",
-    "build:example2": "cp example2/index.html dist && cp example2/index.js dist"
+    "build:example2": "cp example2/index.html dist && cp example2/index.js dist && cp example2/_redirects dist",
+    "build:example3": "cp example3/index.html dist && cp example3/index.js dist && cp example3/_redirects dist"
   },
   "repository": {
     "type": "git",
