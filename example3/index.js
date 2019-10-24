@@ -1,3 +1,8 @@
+// function to intercept clicks on links (router)
+
+// end of router function
+
+
 // urlHistory = require("history");
 
 window.addEventListener("load", function () {
