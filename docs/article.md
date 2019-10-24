@@ -46,7 +46,7 @@ When play with different urls, does a complete page reload
 
 Don't have to intercept url on javascript start as it is set
 
-
+tested cat of js - ended up checking in dist/index.js which made build fail
 
 #### Add router code to index.js
 
