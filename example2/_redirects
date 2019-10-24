@@ -1,3 +1,4 @@
-# netlify redirect file for spaNav
+# netlify redirect file for single page app spaNav
+# Note, the browser still gets the original url and will be able to manage history
 
-/*      /     200
+/*     /index.html    200
