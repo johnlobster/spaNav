@@ -25,3 +25,17 @@ https://spanav.netlify.com/page1
 had to explicitly copy the _redirects over during build
 Can probably do cp *
 favicon git checked in by mistake, could remove it
+
+```
+# netlify redirect file for single page app spaNav
+# Note, the browser still gets the original url and will be able to manage history
+
+/*     /index.html    200
+```
+
+When hit sub page, index.html can't find index.js because now the path is wrong
+
+```
+<script src="/index.js"></script>
+```
+
