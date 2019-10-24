@@ -18,6 +18,9 @@ https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-configure-
 
 https://docs.netlify.com/routing/redirects/redirect-options/
 
+https://docs.netlify.com/routing/redirects/redirect-options/#http-status-codes
+
+
 copy _redirects file over
 
 https://spanav.netlify.com/page1
@@ -38,4 +41,21 @@ When hit sub page, index.html can't find index.js because now the path is wrong
 ```
 <script src="/index.js"></script>
 ```
+
+When play with different urls, does a complete page reload
+
+Don't have to intercept url on javascript start as it is set
+
+
+
+#### Add router code to index.js
+
+Not using webpack - router.js shouldn't export module as the files are concatenated by build
+
+Could return 404
+
+
+
+
+
 
