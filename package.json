@@ -1,0 +1,32 @@
+{
+  "name": "spanav",
+  "version": "0.1.0",
+  "description": "example of link based navigation in single page app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnlobster/spaNav.git"
+  },
+  "keywords": [
+    "spa",
+    "navigation",
+    "history"
+  ],
+  "author": "John Webster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnlobster/spaNav/issues"
+  },
+  "homepage": "https://github.com/johnlobster/spaNav#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "history": "^4.10.1"
+  }
+}

@@ -1,2 +1,5 @@
 # spaNav
-simple web to show navigation in single page app using links
+simple web app to show navigation in single page app using links
+
+### Under development
+
