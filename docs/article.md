@@ -1,10 +1,20 @@
 # Single page app navigation
 
-#### Example1 Basic function
+### Single page web app (spa) strengths and weaknesses
+
+## process
+- create basic web site, with a page navigation mechanism. Test locally
+- deploy to Netlify, test build process
+- enable Netlify redirects
+- add event watcher to all `<a>` tags, check navigation
+- add router function, basic routes, enable moving from page to page
+- refactor router, add `history` navigation, add 404 result
+
+#### example1 Basic function
 
 https://johnlobster.github.io/spaNav/example1
 
-#### Deploy to netlify
+#### example2 Deploy to Netlify
 
 https://spanav.netlify.com/
 
@@ -20,6 +30,10 @@ https://docs.netlify.com/routing/redirects/redirect-options/
 
 https://docs.netlify.com/routing/redirects/redirect-options/#http-status-codes
 
+
+TODO: picture of how Netlify redirect works
+
+TODO: add github connection as a separate picture
 
 copy _redirects file over
 
@@ -44,9 +58,13 @@ When hit sub page, index.html can't find index.js because now the path is wrong
 
 When play with different urls, does a complete page reload
 
-Don't have to intercept url on javascript start as it is set
+Don't have to intercept url on javascript start as it is in location
 
 tested cat of js - ended up checking in dist/index.js which made build fail
+
+use site overview (dashboard) - can immediately see whether build has passed or failed
+
+![Netlify overview](./dashboard.jpg)
 
 #### Add router code to index.js
 
@@ -54,6 +72,8 @@ Not using webpack - router.js shouldn't export module as the files are concatena
 
 Could return 404
 
+
+## Testing
 
 
 

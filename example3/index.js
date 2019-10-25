@@ -17,6 +17,8 @@ window.addEventListener("load", function () {
   
   document.getElementsByTagName("a").onclick= function(event) {
     event.preventDefault(); // prevent browser from navigating to a new link and reloading page
+    event.stopPropagation(); // being paranoid, not using bubbling up in this app
+
     console.log("Clicked on a link");
     console.log("href was " + this.href);
   };
