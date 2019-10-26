@@ -79,6 +79,19 @@ use site overview (dashboard) - can immediately see whether build has passed or 
 
 #### Attach event handlers to all `<a>` tags, add router function to index.js
 
+```js
+  // Attach event listener to all links
+  anchors = document.getElementsByTagName("a");
+  for (let i = 0; i < anchors.length; i++) { 
+    anchors[i].addEventListener("click", function (event) { 
+      event.preventDefault(); // prevent browser from navigating to a new link and reloading page
+      event.stopPropagation(); // prevent bubbling up. Don't need in this example
+
+      console.log("Clicked button " + this.href) 
+    }) 
+  }
+```
+
 Not using webpack - router.js shouldn't export module as the files are concatenated by build
 
 Could return 404

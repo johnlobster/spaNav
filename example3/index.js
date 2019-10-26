@@ -22,8 +22,7 @@ window.addEventListener("load", function () {
     anchors[i].addEventListener("click", function (event) { 
       event.preventDefault(); // prevent browser from navigating to a new link and reloading page
       event.stopPropagation(); // prevent bubbling up. Don't need in this example
-
-      console.log("Clicked button " + this.href) 
+      spaRouter(this.href);
     }) 
   }
 
