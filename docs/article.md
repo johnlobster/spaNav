@@ -1,7 +1,16 @@
 # Single page app navigation
 
+Proof of concept
+
 ### Single page web app (spa) strengths and weaknesses
 
+#### Summary
+
+Want web app to do the following
+
+- enables internal navigation using `<a>` links, or using new url to directly access a page
+- doesn't reload (html, Javascript, css) for internal navigation
+- can use back button on browser as internal navigation
 ## process
 - create basic web site, with a page navigation mechanism. Test locally
 - deploy to Netlify, test build process
@@ -15,6 +24,8 @@
 https://johnlobster.github.io/spaNav/example1
 
 #### example2 Deploy to Netlify
+
+add build scripts to information to `package.json`
 
 https://spanav.netlify.com/
 
@@ -66,13 +77,13 @@ use site overview (dashboard) - can immediately see whether build has passed or 
 
 ![Netlify overview](./dashboard.jpg)
 
-#### Add router code to index.js
+#### Attach event handlers to all `<a>` tags, add router function to index.js
 
 Not using webpack - router.js shouldn't export module as the files are concatenated by build
 
 Could return 404
 
-
+Assigning an event handler to each `<a>` using a loop. Could use event delegation (bubbling up of event) but not important for a proof of concept
 ## Testing
 
 

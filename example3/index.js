@@ -1,5 +1,8 @@
 // function to intercept clicks on links (router)
 
+spaRouter = (newUrl) => {
+  console.log("clicked on a link, href= " + newUrl);
+}
 // end of router function
 
 
@@ -15,13 +18,15 @@ window.addEventListener("load", function () {
 
   // Attach event listener to all links
   
-  document.getElementsByTagName("a").onclick= function(event) {
-    event.preventDefault(); // prevent browser from navigating to a new link and reloading page
-    event.stopPropagation(); // being paranoid, not using bubbling up in this app
+  document.getElementsByTagName("a").foreach( (element) => {
+    element.addEventListener("click", function(event) {
+      event.preventDefault(); // prevent browser from navigating to a new link and reloading page
+      event.stopPropagation(); // prevent bubbling up. Don't need in this example
 
-    console.log("Clicked on a link");
-    console.log("href was " + this.href);
-  };
+      console.log("Clicked on a link");
+      console.log("href was " + this.href);
+    });
+  });
 
 });
 
