@@ -97,7 +97,24 @@ Not using webpack - router.js shouldn't export module as the files are concatena
 Could return 404
 
 Assigning an event handler to each `<a>` using a loop. Could use event delegation (bubbling up of event) but not important for a proof of concept
+
+
 ## Testing
+
+## Accessability
+
+Accessability is another user interface issue. As we are emulating normal browser behavior using javascript, must check that accessability is good. There are 4 main accessability
+1. Use of screen reader and keyboard, no mouse
+2. Use of keyboard, no mouse
+3. Contrast, particularly text on background
+4. Color combinations and contrast still good for colorblind people
+
+3 and 4 are not important for this proof of concept, 2 is really a subset of 1, but can be tested for automatically
+
+So I first checked keyboard operation manually, then screen reader with keyboard, then wrote a keyboard based test which I added into the existing test file.
+
+
+
 
 
 
