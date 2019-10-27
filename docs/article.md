@@ -11,6 +11,9 @@ Want web app to do the following
 - enables internal navigation using `<a>` links, or using new url to directly access a page
 - doesn't reload (html, Javascript, css) for internal navigation
 - can use back button on browser as internal navigation
+- tested on a variety of browsers using browsertool
+- accessible 
+
 ## process
 - create basic web site, with a page navigation mechanism. Test locally
 - deploy to Netlify, test build process
