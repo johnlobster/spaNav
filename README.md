@@ -2,7 +2,7 @@
 
 Simple web app for proof of concept of navigation in single page app using Netlify, `<a>` tags and `history` api
 
-[article]<docs/article.md>
+[article](/https://github.com/johnlobster/spaNav/blob/master/docs/article.md)
 
 Summary
 
