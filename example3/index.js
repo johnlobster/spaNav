@@ -3,12 +3,12 @@
 
 addClass = (element, newClass) => {
   // can add multiple classes
-  element.className = element.className + newClass;
+  element.className = element.className + " " + newClass;
 }
 
 removeClass = (element, classToDelete) => {
   // search for any instances of classToDelete in the class string and delete
-  // should only be 1, but adding g will replace them all
+  // should only be 1, but added g to replace them all
   // cannot delete multiple classes using this function
   regex = new RegExp ("\\b${classToDelete}\\b", "g")
   let newClasses = element.className.replace( regex, "");
