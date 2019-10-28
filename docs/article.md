@@ -36,6 +36,8 @@ https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlif
 
 Test that page movement leads to 404
 
+Create development server that always returns index.html (copied from create-react-script). Saves time and netlify build minutes.
+
 #### Add redirects
 
 https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-configure-redirects-for-your-static-site/
@@ -104,6 +106,12 @@ Assigning an event handler to each `<a>` using a loop. Could use event delegatio
 Basic operation requires use of history to push new url, otherwise it never moves from page1
 
 history security issues ?
+
+Spec for router(`newUrl`, `oldUrl`)
+- If `newUrl` goes to a different domain, change location. Happens if there is an internal link to a different server
+- If `oldUrl` and `newUrl` are the same, don't change anything
+- Check `newUrl` against a list of pages. If it doesn't match, then return 404 response
+- if `newUrl` matches a page, push the new url into the history 
 
 ## Testing
 

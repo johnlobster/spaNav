@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dev-server.js example3",
     "build": "npm run build:example3",
     "build:example2": "cp example2/index.html dist && cp example2/index.js dist && cp example2/_redirects dist",
     "build:example3": "cp example3/index.html dist && cp example3/index.js  dist && cp example3/_redirects dist"
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/johnlobster/spaNav#readme",
   "devDependencies": {},
   "dependencies": {
+    "express": "^4.17.1",
     "history": "^4.10.1"
   }
 }
