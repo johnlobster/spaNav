@@ -49,8 +49,8 @@ spaRouter = (newUrl, oldUrl) => {
   // change the tab
   const oldLink = document.getElementById(`page${oldUrlPage}Link`);
   const newLink = document.getElementById(`page${newUrlPage}Link`);
-  oldLink.removeClass("active");
-  newLink.addClass("active");
+  removeClass(oldLink,"active");
+  addClass(newLink,"active");
   // have to change the ARIA attributes as well
   oldLink.setAttribute("aria-selected", "false");
   newLink.setAttribute("aria-selected", "true");
@@ -58,9 +58,9 @@ spaRouter = (newUrl, oldUrl) => {
   // change the page
   const oldPage = document.getElementById(`page${oldUrlPage}`);
   const newPage = document.getElementById(`page${newUrlPage}`);
-  oldPage.removeClass("active");
-  oldPage.removeClass("show");
-  newPage.addClass("show active");
+  removeClass(oldPage,"active");
+  removeClass(oldPage,"show");
+  addClass(newPage,"show active");
 
 }
 // end of router function
