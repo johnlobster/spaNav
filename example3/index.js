@@ -21,8 +21,7 @@ removeClass = (element, classToDelete) => {
 spaRouter = (newUrl, oldUrl) => {
   console.log("clicked on a link, href= " + newUrl);
 
-  console.log("Old url " + oldUrl);
-  console.log("New url " + newUrl);
+  
 
   if ( oldUrl === newUrl) {
     // if the url hasn't changed, then no navigation is required
@@ -42,6 +41,9 @@ spaRouter = (newUrl, oldUrl) => {
   const oldUrlPage = oldUrlArray[2];
   // const newUrlDomain = newUrlArray[1];
   const newUrlPage = newUrlArray[2];
+
+  console.log(`Old url ${oldUrl} page ${oldUrlPage}`);
+  console.log(`New url ${newUrl} page ${newUrlPage}`);
 
   ///////////////////////////////////////////////////////////////////////////
   // Navigate to new spa page
