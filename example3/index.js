@@ -1,4 +1,5 @@
-// function to intercept clicks on links (router)
+
+// helper functions
 
 addClass = (element, newClass) => {
   // can add multiple classes
@@ -13,11 +14,15 @@ removeClass = (element, classToDelete) => {
   let newClasses = element.className.replace( regex, "");
   element.className = newClasses;
 }
-spaRouter = (newUrl) => {
+
+//////////////////////////////////////////////////////////////////////////////////
+// function to intercept clicks on links (router)
+
+spaRouter = (newUrl, oldUrl) => {
   console.log("clicked on a link, href= " + newUrl);
 
-  const oldUrl = location.href;
-  console.log("Old url " + oldUrl)
+  console.log("Old url " + oldUrl);
+  console.log("New url " + newUrl);
 
   if ( oldUrl === newUrl) {
     // if the url hasn't changed, then no navigation is required
@@ -30,20 +35,20 @@ spaRouter = (newUrl) => {
 
   if ( ! newUrlArray) {
     // match failed
-    console.log("No match, add external link check");
+    console.log("No match, was an external link, need to add code to navigate there");
     return;
   }
-
-  ///////////////////////////////////////////////////////////////////////////
-  // Navigate to new spa page
 
   const oldUrlPage = oldUrlArray[2];
   // const newUrlDomain = newUrlArray[1];
   const newUrlPage = newUrlArray[2];
 
+  ///////////////////////////////////////////////////////////////////////////
+  // Navigate to new spa page
+
   // change the tab
-  const oldLink = getElementById(`page${oldUrlPage}Link`);
-  const newLink = getElementById(`page${newUrlPage}Link`);
+  const oldLink = document.getElementById(`page${oldUrlPage}Link`);
+  const newLink = document.getElementById(`page${newUrlPage}Link`);
   oldLink.removeClass("active");
   newLink.addClass("active");
   // have to change the ARIA attributes as well
@@ -51,11 +56,10 @@ spaRouter = (newUrl) => {
   newLink.setAttribute("aria-selected", "true");
 
   // change the page
-  const oldPage = getElementById(`page${oldUrlPage}`);
-  const newPage = getElementById(`page${newUrlPage}`);
+  const oldPage = document.getElementById(`page${oldUrlPage}`);
+  const newPage = document.getElementById(`page${newUrlPage}`);
   oldPage.removeClass("active");
   oldPage.removeClass("show");
-
   newPage.addClass("show active");
 
 }
@@ -66,11 +70,13 @@ spaRouter = (newUrl) => {
 
 window.addEventListener("load", function () {
 
+  console.log("New load from server");
+
+  // on start, check url, add /page1 if bare, modify history
+
   // footText is element where we can display url information on web page
   let footText = document.getElementById("spaFooterText");
-
   footText.innerHTML = location.href;
-
 
   // Attach event listener to all links
   anchors = document.getElementsByTagName("a");
@@ -78,7 +84,7 @@ window.addEventListener("load", function () {
     anchors[i].addEventListener("click", function (event) { 
       event.preventDefault(); // prevent browser from navigating to a new link and reloading page
       event.stopPropagation(); // prevent bubbling up. Don't need in this example
-      spaRouter(this.href);
+      spaRouter(this.href, location.href);
     }) 
   }
 
