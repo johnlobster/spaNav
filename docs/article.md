@@ -101,8 +101,15 @@ Could return 404
 
 Assigning an event handler to each `<a>` using a loop. Could use event delegation (bubbling up of event) but not important for a proof of concept
 
+Basic operation requires use of history to push new url, otherwise it never moves from page1
+
+history security issues ?
 
 ## Testing
+
+client/browser testing. Using Selenium and a service such as 
+
+Want to text out a variety of platforms/browsers
 
 ## Accessability
 

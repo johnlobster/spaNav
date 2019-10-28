@@ -64,6 +64,9 @@ spaRouter = (newUrl, oldUrl) => {
   removeClass(oldPage,"show");
   addClass(newPage,"show active");
 
+  // add to browser history
+  history.pushState(null, "", `page${newUrlPage}`);
+
 }
 // end of router function
 
