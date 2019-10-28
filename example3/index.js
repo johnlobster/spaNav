@@ -10,8 +10,9 @@ removeClass = (element, classToDelete) => {
   // search for any instances of classToDelete in the class string and delete
   // should only be 1, but added g to replace them all
   // cannot delete multiple classes using this function
-  regex = new RegExp ("\\b${classToDelete}\\b", "g")
-  let newClasses = element.className.replace( regex, "");
+  const regex = new RegExp ("\\b${classToDelete}\\b", "g");
+  const oldClasses = element.className
+  let newClasses = oldClasses.replace( regex, "");
   element.className = newClasses;
 }
 
